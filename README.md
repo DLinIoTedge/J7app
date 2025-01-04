@@ -274,3 +274,170 @@ Open a new Command Prompt and run:
 
 If correctly set, this will display the keytool help information.
 
+@@ Ubuntu 22.04 Machine
+
+Steps can be adapted for Ubuntu 22.04, though the commands differ slightly for installing packages and setting up paths. Here’s the corresponding guide for Ubuntu:
+
+
+---
+
+Step U1: Install JDK
+
+1. Install OpenJDK (version 11 or 17, depending on your project requirement):
+
+        sudo apt update
+        sudo apt install openjdk-17-jdk
+
+
+2. Set environment variables by editing ~/.bashrc or ~/.zshrc:
+
+        echo "export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> ~/.bashrc
+        echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
+        source ~/.bashrc
+
+
+3. Verify installation:
+
+        java -version
+
+
+
+
+---
+
+Step U2: Install Android SDK (Command-Line Tools)
+
+1. Download the command-line tools from the Android SDK page.
+
+
+2. Extract the tools:
+
+        mkdir -p ~/Android/Sdk
+        unzip commandlinetools-linux-*.zip -d ~/Android/Sdk/cmdline-tools
+        mv ~/Android/Sdk/cmdline-tools/cmdline-tools ~/Android/Sdk/cmdline-tools/latest
+
+
+3. Set environment variables in ~/.bashrc:
+
+        echo "export ANDROID_HOME=~/Android/Sdk" >> ~/.bashrc
+        echo "export PATH=\$PATH:\$ANDROID_HOME/platform-tools:\$ANDROID_HOME/cmdline-tools/latest/bin" >> ~/.bashrc
+s        ource ~/.bashrc
+
+
+4. Install essential packages:
+
+        sdkmanager --install "platform-tools" "platforms;android-33"
+
+
+
+
+---
+
+Step U3: Install Android NDK
+
+1. Use sdkmanager to install NDK:
+
+        sdkmanager --install "ndk;25.1.8937393"
+
+
+2. Verify NDK installation:
+
+        ls $ANDROID_HOME/ndk
+
+
+
+
+---
+
+Step U4: Install Gradle
+
+1. Download Gradle from Gradle’s website.
+
+
+2. Extract it:
+
+        wget https://services.gradle.org/distributions/gradle-9.0-bin.zip
+        sudo unzip gradle-9.0-bin.zip -d /opt/gradle
+
+
+3. Set environment variables in ~/.bashrc:
+
+        echo "export GRADLE_HOME=/opt/gradle/gradle-9.0" >> ~/.bashrc
+        echo "export PATH=\$PATH:\$GRADLE_HOME/bin" >> ~/.bashrc
+        source ~/.bashrc
+
+
+4. Verify installation:
+
+        gradle -v
+
+---
+
+Commands to Build APK on Ubuntu
+
+In your project directory (J7appv4), run:
+
+        ./gradlew assembleRelease
+          or
+         gradle assembleRelease
+
+    This will generate the APK in app/build/outputs/apk/release/.
+
+
+In Ubuntu, the keytool command is part of the Java Development Kit (JDK). If keytool is not available, you need to install the JDK and configure it properly.
+
+
+---
+
+Step U5: Install OpenJDK (if needed)
+
+1. Update the package index:
+
+        sudo apt update
+
+
+2. Install the OpenJDK (choose version 11 or 17):
+
+        sudo apt install openjdk-17-jdk
+
+
+3. Confirm installation:
+
+        java -version
+
+
+
+
+---
+
+Step U6: Find keytool
+
+The keytool binary is located in the bin directory of the JDK installation:
+
+Path example: /usr/lib/jvm/java-17-openjdk-amd64/bin/keytool
+
+
+
+---
+
+Step U7: Add keytool to PATH
+
+1. Edit your shell configuration file (~/.bashrc or ~/.zshrc):
+
+        echo "export PATH=\$PATH:/usr/lib/jvm/java-17-openjdk-amd64/bin" >> ~/.bashrc
+        source ~/.bashrc
+
+
+2. Verify the keytool is available:
+
+        keytool -help
+
+---
+
+Using keytool to Generate a Keystore
+
+Run this command to create a keystore:
+
+keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-key-alias
+
+This command works the same as on Windows, but ensure paths and configurations match your environment.
