@@ -321,7 +321,7 @@ Step U2: Install Android SDK (Command-Line Tools)
 
         echo "export ANDROID_HOME=~/Android/Sdk" >> ~/.bashrc
         echo "export PATH=\$PATH:\$ANDROID_HOME/platform-tools:\$ANDROID_HOME/cmdline-tools/latest/bin" >> ~/.bashrc
-s        ource ~/.bashrc
+        source ~/.bashrc
 
 
 4. Install essential packages:
