@@ -8,7 +8,9 @@ J7app is an innovative Android application designed to deliver high-performance 
 ---
 
 Key Features
+
 Seamless Integration of Java and C++: Utilize the power of the Android NDK for performance-critical components.
+
 Robust Build System with Gradle: Simplified dependency management and flexible build customization.
 Modular Codebase: Clean and maintainable project structure with a focus on scalability.
 Efficient CPU Utilization: Native code optimization for computational tasks.
@@ -17,7 +19,9 @@ Efficient CPU Utilization: Native code optimization for computational tasks.
 ---
 
 Project Structure
+
 Root Folder (J7appv4): Contains project-level configuration files (build.gradle, settings.gradle, gradle.properties).
+
 Gradle Wrapper: Uses gradle-wrapper.properties for specifying Gradle version (9.0).
 App Folder: Includes the src directory, build.gradle, and key file for signing the APK.
 
