@@ -141,7 +141,7 @@ To build a key file (keystore) for signing an APK on a Windows machine, follow t
 
 ---
 
-Step 1: Generate the Keystore File
+Step K1: Generate the Keystore File
 
 1. Open a Command Prompt or PowerShell window.
 
@@ -179,7 +179,7 @@ Your name, organization, location, etc.
 
 ---
 
-Step 2: Using the Keystore
+Step K2: Using the Keystore
 
 1. Place my-release-key.jks in a secure location (e.g., project’s app folder).
 
@@ -208,7 +208,7 @@ Step 2: Using the Keystore
 
 ---
 
-Step 3: Verify Keystore
+Step K3: Verify Keystore
 
 Check if the keystore was created successfully:
 
@@ -221,7 +221,7 @@ keytool command is not always available directly in the command line unless the 
 
 ---
 
-Step 1: Ensure JDK is Installed
+Step K4: Ensure JDK is Installed
 
 1. Install JDK if it is not already installed:
 
@@ -235,7 +235,7 @@ Download from Oracle JDK or use an open-source version like OpenJDK.
 
 ---
 
-Step 2: Locate keytool
+Step K5: Locate keytool
 
 The keytool utility is typically located in the bin directory of the JDK installation:
 
@@ -248,7 +248,7 @@ The keytool utility is typically located in the bin directory of the JDK install
 
 ---
 
-Step 3: Add keytool to the Path
+Step  K6: Add keytool to the Path
 
 1. Open System Properties:
 Right-click This PC → Properties → Advanced system settings → Environment Variables.
@@ -266,7 +266,7 @@ Right-click This PC → Properties → Advanced system settings → Environment 
 
 ---
 
-Step 4: Verify keytool is Available
+Step K7: Verify keytool is Available
 
 Open a new Command Prompt and run:
 
