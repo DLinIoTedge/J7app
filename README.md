@@ -29,11 +29,13 @@ App Folder: Includes the src directory, build.gradle, and key file for signing t
 
 Build Instructions
 To build the release APK from the command line:
-On Ubuntu
+On Ubuntu ( use following in Root folder. Where Root folder is J7app )
 
-    ./gradlew assembleRelease
+    ./gradlew assembleRelease 
+    or
+    gradle assembleRelease 
 
-On Windows
+On Windows ( use following in Root folder. Where Root folder is J7app )
 
     gradlew assembleRelease
 
