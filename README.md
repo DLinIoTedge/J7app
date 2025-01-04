@@ -1,8 +1,9 @@
 
+##J7app
 
 ---
 
-##J7app
+
 J7app is an innovative Android application designed to deliver high-performance solutions by leveraging a hybrid architecture with Java and C++ for computational tasks. This project is built using the Android SDK and Android NDK, providing an efficient and scalable platform for modern mobile development. By focusing on optimized native code execution on the CPU, J7app ensures enhanced performance and faster processing for resource-intensive operations.
 
 ---
