@@ -212,8 +212,65 @@ Step 3: Verify Keystore
 
 Check if the keystore was created successfully:
 
-keytool -list -v -keystore my-release-key.jks
+        keytool -list -v -keystore my-release-key.jks
 
 Replace the file name and passwords with your values as needed.
 
+keytool command is not always available directly in the command line unless the Java Development Kit (JDK) is properly installed and configured. Here’s how to ensure keytool is accessible on a Windows machine:
+
+
+---
+
+Step 1: Ensure JDK is Installed
+
+1. Install JDK if it is not already installed:
+
+Download from Oracle JDK or use an open-source version like OpenJDK.
+
+
+
+2. Confirm installation by running:
+
+        java -version
+
+---
+
+Step 2: Locate keytool
+
+The keytool utility is typically located in the bin directory of the JDK installation:
+
+        Example path: C:\Program Files\Java\jdk-17\bin
+
+
+
+
+
+
+---
+
+Step 3: Add keytool to the Path
+
+1. Open System Properties:
+Right-click This PC → Properties → Advanced system settings → Environment Variables.
+
+
+2. Under System Variables, find Path, click Edit, and add the path to the JDK bin folder:
+
+        C:\Program Files\Java\jdk-17\bin
+
+
+3. Click OK to save the changes.
+
+
+
+
+---
+
+Step 4: Verify keytool is Available
+
+Open a new Command Prompt and run:
+
+        keytool -help
+
+If correctly set, this will display the keytool help information.
 
