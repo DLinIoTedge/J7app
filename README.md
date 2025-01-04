@@ -443,3 +443,63 @@ Run this command to create a keystore:
 keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-key-alias
 
 This command works the same as on Windows, but ensure paths and configurations match your environment.
+
+---
+##  Finding the APK and Installing on Android Device
+
+1. Locating the APK File
+
+After building the APK using Gradle, you can find the generated APK file in the following directory:
+
+        J7appv4/app/build/outputs/apk/release/
+
+The APK file will be named something like app-release.apk.
+
+
+---
+
+2. Installing the APK on Android Device via USB Cable
+
+Step I1: Enable Developer Options and USB Debugging
+
+Go to Settings → About phone → Tap Build number 7 times to enable Developer options.
+
+In Developer options, enable USB debugging.
+
+
+Step I2: Connect the Android Device to Your Computer
+
+Connect your Android device to your computer using a USB cable.
+
+Ensure the phone is in File Transfer or MTP mode (you may see a prompt on the phone asking for the connection type).
+
+
+Step I3: Locate the APK File on Your Computer
+
+Navigate to J7appv4/app/build/outputs/apk/release/ and find the generated APK (e.g., app-release.apk).
+
+
+Step I4: Copy the APK to the Android Device
+
+Open the phone's storage via your computer's file explorer.
+
+Choose the folder where you want to copy the APK (e.g., Downloads or Documents).
+
+Copy the APK file from your computer to the selected folder on the phone.
+
+
+Step I5: Install the APK on the Android Device
+
+On your phone, open the file manager and navigate to where you copied the APK file.
+
+Tap the APK file to begin the installation process.
+
+If prompted, enable installation from Unknown sources (under Settings → Security).
+
+Follow the on-screen instructions to install the app.
+
+
+Once installed, you can launch J7app on your Android device.
+
+
+---
