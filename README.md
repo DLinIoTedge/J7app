@@ -467,6 +467,7 @@ Go to Settings → About phone → Tap Build number 7 times to enable Developer 
 In Developer options, enable USB debugging.
 
 
+
 Step I2: Connect the Android Device to Your Computer
 
 Connect your Android device to your computer using a USB cable.
@@ -474,9 +475,13 @@ Connect your Android device to your computer using a USB cable.
 Ensure the phone is in File Transfer or MTP mode (you may see a prompt on the phone asking for the connection type).
 
 
+
+
 Step I3: Locate the APK File on Your Computer
 
 Navigate to J7appv4/app/build/outputs/apk/release/ and find the generated APK (e.g., app-release.apk).
+
+
 
 
 Step I4: Copy the APK to the Android Device
@@ -488,6 +493,8 @@ Choose the folder where you want to copy the APK (e.g., Downloads or Documents).
 Copy the APK file from your computer to the selected folder on the phone.
 
 
+
+
 Step I5: Install the APK on the Android Device
 
 On your phone, open the file manager and navigate to where you copied the APK file.
@@ -497,6 +504,7 @@ Tap the APK file to begin the installation process.
 If prompted, enable installation from Unknown sources (under Settings → Security).
 
 Follow the on-screen instructions to install the app.
+
 
 
 Once installed, you can launch J7app on your Android device.
