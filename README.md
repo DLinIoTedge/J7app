@@ -43,6 +43,9 @@ On Windows
 This repository is ideal for developers aiming to understand and implement a hybrid Android application architecture using native C++ for performance optimization. Explore the code, contribute, or customize it to meet your project’s requirements.
 
 # Prerequisites
+
+##  for Windows machine
+
 Here’s how to install the four prerequisites on a Windows machine via command line or PowerShell, including setting them in the Path.
 
 Step 1: Install JDK
