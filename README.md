@@ -276,7 +276,7 @@ Open a new Command Prompt and run:
 
 If correctly set, this will display the keytool help information.
 
-@@ Ubuntu 22.04 Machine
+## Ubuntu 22.04 Machine
 
 Steps can be adapted for Ubuntu 22.04, though the commands differ slightly for installing packages and setting up paths. Here’s the corresponding guide for Ubuntu:
 
